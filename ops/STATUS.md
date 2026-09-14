@@ -30,8 +30,10 @@ Recurring model work remains disabled.
 1. Fork exists and is readable through the connected GitHub account. Native
    environment connection is user-confirmed; no environment management or
    cloud-task launch control is exposed in this session.
-2. No live project quota adapter or enforceable per-run budget demonstrated.
-   Recurring inference stays disabled under the strict20% ceiling.
+2. Read-only quota probe implemented: ops/quota_probe.py. CLI exists outside
+   PATH; account/rateLimits/read returns401 with current managed auth. Native
+   goal tokenBudget exists but does not establish a20% project cap. See
+   ops/QUOTA.md. Recurring inference remains disabled.
 3. No scheduled cloud coding round trip demonstrated. Current hosted execution
    is verified; that does not establish a persistent unattended dispatcher.
 4. Extend oracle calibration to environment-sensitive and multi-segment cases;
