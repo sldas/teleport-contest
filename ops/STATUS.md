@@ -1,8 +1,10 @@
 # Status — hosted bootstrap checkpoint
 
-Kickoff authorized. Local branch: agentic/bootstrap. Canonical base:
+Kickoff authorized. Bootstrap merged to main via PR1. Current work: dice RNG semantics. Canonical base:
 364e9d6708aa9b6b369d5683ceec2df73ae93d37. GitHub identity: sldas.
-User confirmed sldas/teleport-contest is connected. Fork verified at the canonical base. Bootstrap publication is in progress; recurring model work remains disabled.
+User confirmed sldas/teleport-contest is connected. GitHub publication verified:
+PR1 merged at c48fdd3d7415ccf47b973471afd9fe5422c63b41.
+Recurring model work remains disabled.
 
 ## Completed
 - Agentic category metadata and operating kit committed locally.
@@ -35,8 +37,15 @@ User confirmed sldas/teleport-contest is connected. Fork verified at the canonic
 4. Extend oracle calibration to environment-sensitive and multi-segment cases;
    resolve missing metadata separately. Two sessions do not certify all behavior.
 
-No gameplay implementation changed in this bootstrap; score remains the starter
-baseline. Next engineering work: source contracts and directly authored numeric,
-RNG and input foundations, followed by the initialization dependency chain.
+First implementation correction: js/rng.js d(n,x) now uses raw core draws and
+emits one aggregate d event, matching the patched C function. Test-only C
+oracle uses the unchanged source function and actual ISAAC64 implementation:
+403 sequences pass for values, log events and next RNG state. All44 public
+session metrics are unchanged; score remains0/11405. This helper is not yet
+used by the starter's real gameplay path, so no score gain is claimed.
+Next engineering work: complete RNG contexts/luck wrappers and input contracts,
+then replace the initialization fastforward dependencies with real source logic.
+Tests: run through ops/with-toolchain.sh python3 tests/rng-dice-oracle.py.
+No agent remains running after a checkpoint unless explicitly recorded.
 Model setting Astra High was user-reported; runtime billing/routing unmeasured.
 No child-agent or paid API work was launched.
