@@ -1,0 +1,13 @@
+# First hosted task
+
+Paste the following into a new Codex cloud task attached to the fork. Task routing must be selected using supported product controls; a model name written in this prompt does not enforce routing.
+
+> Read AGENTS.md, ops/CHARTER.md, ops/STATUS.md and ops/queue.json. Execute P00 for this public, agentic-category contest fork in the hosted environment. Respect the user's whole-project ceiling of 20% of subscription allowance. Do not start other model tasks, enable recurrence or buy API capacity. Establish repository identity, applicable instructions, upstream pin, category metadata, environment fingerprint, baseline score and a durable checkpoint. Inspect the native capabilities available for quota accounting, model selection and bounded task execution; document evidence or mark each missing capability blocked. Never infer quota from task count or an assumed average price. Keep infrastructure specific to this contest. Attempt the prepared reference setup when the environment supports it, recording exact failures without changing official fixtures. End with one reviewable commit or native cloud change artifact, the actual test results and an updated STATUS.md with the next admissible task. Do not claim unattended readiness.
+
+## Second task: calibrated foundation
+
+After P00 has an actual durable checkpoint, launch P01/P02 as a single bounded work package only when budget admission permits. Build the official patched C recorder, compare representative recordings, then map the initialization dependency path from inputs to the first stable screen. Identify C integer semantics, PRNG wrappers, input suspension, Lua level-generation calls and shared-state boundaries. Produce source-linked contracts and tests before large gameplay patches. Do not promise that the shortest session needs only a small implementation.
+
+## First implementation task template
+
+> Goal: [one observable behavior]. Read only the charter, latest status, this task and the source contracts it references. Base commit: [SHA]. Allowed files: [list]. Read the relevant C/Lua definitions, macros, callers and shared state. Implement behavior directly in readable JavaScript. Record a falsifiable hypothesis before editing. Validate with [small case], [semantic reference comparison] and [existing regressions]. Do not modify frozen evaluator files, official session data or expected output to obtain a pass. After two failed hypotheses on the same mismatch, report a blocker and checkpoint evidence. Record real provenance, verification commands, remaining risks and next action. Stop at the stated task boundary; do not create child agents or a scheduler.
