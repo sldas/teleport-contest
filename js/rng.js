@@ -1,6 +1,5 @@
 // rng.js — PRNG wrappers around ISAAC64.
-// C ref: rng.c — three RNG contexts: core, display, lua.
-// Contest: only core context is used for parity.
+// C ref: patched rnd.c. This module currently exposes core RNG wrappers.
 
 import { isaac64_init, isaac64_next_uint64 } from './isaac64.js';
 import { game } from './gstate.js';
@@ -49,10 +48,12 @@ export function rnd(x) {
 // C ref: rn1(x, y) — random number y..y+x-1
 export function rn1(x, y) { return rn2(x) + y; }
 
-// C ref: d(n, x) — roll n dice of x sides
+// C ref: patched rnd.c d(). Raw draws produce one aggregate log event.
+// Valid C call domain: n >= 0; x > 0 unless n == 0.
 export function d(n, x) {
-    let sum = 0;
-    for (let i = 0; i < n; i++) sum += rnd(x);
+    let sum = n;
+    for (let i = 0; i < n; i++) sum += RND(x);
+    if (_rngLogEnabled) _rngLog.push(`d(${n},${x})=${sum}`);
     return sum;
 }
 

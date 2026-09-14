@@ -1,12 +1,12 @@
 {
-  "status": "checkpointed_account_and_quota_gates",
+  "status": "published_bootstrap_no_schedule",
   "tasks": [
     {
       "id": "P00",
       "title": "Hosted repository and durable checkpoint; inspect quota gate",
       "depends_on": [],
       "acceptance": "Verify hosted fork/checkpoint; document budget enforcement as available or blocked. No recurring model tasks without admission.",
-      "status": "partial_account_gate"
+      "status": "completed_with_documented_capability_gates"
     },
     {
       "id": "P01",
@@ -34,7 +34,7 @@
         "P02"
       ],
       "acceptance": "Direct LLM port of wrappers/helpers verified against C; no RNG-only correctness claims.",
-      "status": "pending"
+      "status": "partial_dice_wrapper_verified"
     },
     {
       "id": "P04",

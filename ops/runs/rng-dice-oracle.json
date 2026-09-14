@@ -1,0 +1,1 @@
+{"passed": true, "seeds": 13, "cases_per_seed": 31, "total_sequences": 403, "checks": ["dice value", "aggregate log", "next raw RNG result"], "source_function_sha256": "d38935e48626ac19a3fb55d7c0232cc09af9340e13713373d57947b31399b27c"}
