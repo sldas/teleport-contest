@@ -1,0 +1,26 @@
+{
+  "read_only": true,
+  "source_pin": "364e9d6708aa9b6b369d5683ceec2df73ae93d37",
+  "head": {
+    "rc": 0,
+    "output": "364e9d6708aa9b6b369d5683ceec2df73ae93d37"
+  },
+  "fixture_mismatches": [],
+  "category": "agentic",
+  "tools": {
+    "node": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "python3": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "git": "/usr/local/bin/git",
+    "clang": null,
+    "make": "/usr/bin/make",
+    "bison": null,
+    "flex": null,
+    "rsync": "/usr/bin/rsync"
+  },
+  "node": {
+    "rc": 0,
+    "output": "v24.19.0"
+  },
+  "live_quota_adapter": "not_configured",
+  "unattended_dispatch_ready": false
+}

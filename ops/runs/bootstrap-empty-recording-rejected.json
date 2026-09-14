@@ -1,0 +1,26 @@
+{
+  "exact_compared_fields_match": false,
+  "normalization": false,
+  "segment_lengths": [
+    {
+      "reference": 23,
+      "actual": 0
+    }
+  ],
+  "mismatch_counts": {
+    "empty_steps": 1,
+    "step_count": 1
+  },
+  "first_differences": [
+    {
+      "kind": "empty_steps",
+      "segment": 0
+    },
+    {
+      "kind": "step_count",
+      "segment": 0,
+      "expected": 23,
+      "actual": 0
+    }
+  ]
+}

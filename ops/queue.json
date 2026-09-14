@@ -1,0 +1,136 @@
+{
+  "status": "checkpointed_account_and_quota_gates",
+  "tasks": [
+    {
+      "id": "P00",
+      "title": "Hosted repository and durable checkpoint; inspect quota gate",
+      "depends_on": [],
+      "acceptance": "Verify hosted fork/checkpoint; document budget enforcement as available or blocked. No recurring model tasks without admission.",
+      "status": "partial_account_gate"
+    },
+    {
+      "id": "P01",
+      "title": "C reference build and recording calibration",
+      "depends_on": [
+        "P00"
+      ],
+      "acceptance": "Build on hosted Linux; compare representative public inputs with exact scorer; separate libc/path/TZ differences.",
+      "status": "partial_two_session_calibration"
+    },
+    {
+      "id": "P02",
+      "title": "Source map, provenance and branch contracts",
+      "depends_on": [
+        "P00"
+      ],
+      "acceptance": "Map C/Lua functions, shared state, calls and effects; no executable C-to-JS emitter.",
+      "status": "partial_source_contract"
+    },
+    {
+      "id": "P03",
+      "title": "RNG and C numeric semantics",
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "acceptance": "Direct LLM port of wrappers/helpers verified against C; no RNG-only correctness claims.",
+      "status": "pending"
+    },
+    {
+      "id": "P04",
+      "title": "Input suspension and terminal boundary",
+      "depends_on": [
+        "P02"
+      ],
+      "acceptance": "Before-input capture, menus, More, cancellation and reset tests; log known frozen serializer defect.",
+      "status": "pending"
+    },
+    {
+      "id": "P05",
+      "title": "Lua and dungeon dependency decision",
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "acceptance": "Inspect actual initialization and Lua reachability; directly port level scripts/bindings; declare unsupported paths.",
+      "status": "pending"
+    },
+    {
+      "id": "P06",
+      "title": "Options, character creation and object initialization",
+      "depends_on": [
+        "P03",
+        "P04"
+      ],
+      "acceptance": "State and output match for multiple real configurations.",
+      "status": "pending"
+    },
+    {
+      "id": "P07",
+      "title": "Level generation and first honest playable session",
+      "depends_on": [
+        "P05",
+        "P06"
+      ],
+      "acceptance": "Replace reachable fastforward scaffolding; pass starter plus independent seeds without replay special cases.",
+      "status": "pending"
+    },
+    {
+      "id": "P08",
+      "title": "Movement, turns, monsters and inventory",
+      "depends_on": [
+        "P07"
+      ],
+      "acceptance": "Source-guided functional batches; first divergence and hidden-state checks.",
+      "status": "pending"
+    },
+    {
+      "id": "P09",
+      "title": "Save, restore, bones and multi-game state",
+      "depends_on": [
+        "P07"
+      ],
+      "acceptance": "Persist through canonical VFS; isolation between games and sessions.",
+      "status": "pending"
+    },
+    {
+      "id": "P10",
+      "title": "Spells, shops, quests and remaining interactions",
+      "depends_on": [
+        "P08"
+      ],
+      "acceptance": "Choose source gaps by dependency and hidden-case impact, not easy tests.",
+      "status": "pending"
+    },
+    {
+      "id": "P11",
+      "title": "Generalization campaign",
+      "depends_on": [
+        "P07"
+      ],
+      "acceptance": "Validation families plus sealed audit partition; mutation checks; no endless easy-case growth.",
+      "status": "pending"
+    },
+    {
+      "id": "P12",
+      "title": "Phase 2 change rehearsal",
+      "depends_on": [
+        "P08",
+        "P09"
+      ],
+      "acceptance": "C patch to source-aligned JS patch; measured normalized diff and model cost.",
+      "status": "pending"
+    },
+    {
+      "id": "P13",
+      "title": "Hosted unattended pilot",
+      "depends_on": [
+        "P00",
+        "P03",
+        "P04"
+      ],
+      "acceptance": "Only after quota admission is enforceable: real scheduled bounded edit/test/checkpoint round trip, fresh-checkout resume and stop test, no Mac/VPS.",
+      "status": "pending"
+    }
+  ]
+}
